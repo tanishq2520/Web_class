@@ -12,56 +12,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .sidebar {
-            width: 20%;
-            height: 100vh;
-            background-color: #ffffff;
-            position: fixed;
-            top: 0;
-            left: 0;
-            border-right: 2px dashed black;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding: 0;
+        body {
             margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            height: 100vh;
+            flex-direction: column;
         }
-        .sidebar ul li {
-            padding: 10px;
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ffffff;
             border-bottom: 2px dashed black;
+            padding: 10px;
+        }
+
+        .navbar h1 {
+            color: limegreen; /* Color Effect */
+            margin: 0;
+            border-bottom: 2px solid limegreen; /* Color Effect */
+            font-size: 20px; /* Text Size */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow Effect */
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links li {
+            margin-right: 10px;
             font-weight: 700;
         }
-        .sidebar ul li a {
+
+        .nav-links a {
             color: black;
-            font: optional;
             text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s; /* Transition for both color and background */
+            font-size: 16px; /* Text Size */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Shadow Effect */
         }
-        .sidebar ul li a:hover {
+
+        .nav-links a:hover {
+            background-color: #f0f0f0;
             color: blue;
         }
-        .sidebar h1 {
-            text-align: center;
-            padding: 10px;
-            margin: 0;
-            color: green;
-            border-bottom: 2px solid green;
+
+        .nav-links a.active {
+            background-color: lightblue; /* Background color for the active item */
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Box shadow for the active item */
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .nav-links {
+                margin-top: 10px;
+            }
+
+            .nav-links li {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="sidebar">
+    <div class="navbar">
         <h1>Admin Panel</h1>
-        <ul>
-            <!-- <img src="" alt="no img"> -->
-            <li><a href="login.php">Login :-</a></li>
-            <li><a href="category.php">Category :-</a></li>
-            <li><a href="category_manage.php">Manage Category :-</a></li>
-            <li><a href="book.php">Book :-</a></li>
-            <li><a href="book_manage.php">Manage Book :-</a></li>
+        <ul class="nav-links">
+            <li><a href="login.php">Login</a></li>
+            <li><a href="category.php">Category</a></li>
+            <li><a href="category_manage.php">Manage Category</a></li>
+            <li><a href="book.php">Book</a></li>
+            <li><a href="book_manage.php">Manage Book</a></li>
             <li><a href="role.php">Role</a></li>
             <li><a href="role_manage.php">Manage Role</a></li>
             <li><a href="employee.php">Employee</a></li>
-            <li><a href="employee_manage.php">Manage Employee</a></li>
+            <li><a href="employee_manage.php" class="active">Manage Employee</a></li>
         </ul>
     </div>
 </body>
