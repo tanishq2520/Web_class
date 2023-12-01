@@ -1,8 +1,8 @@
 <?php
-    // include("header.php");
-    // include("login.php");
-    // include("role.php");
-    // include("category_manage.php");
+
+    
+    
+    
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +10,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <style>
         body {
             margin: 0;
@@ -87,17 +87,14 @@
 </head>
 <body>
     <div class="navbar">
-        <h1>Admin Panel</h1>
+        <h1>Php Project</h1>
         <ul class="nav-links">
             <li><a href="login.php">Login</a></li>
+            <li><a href="add_product.php">Add Product</a></li>
             <li><a href="category.php">Category</a></li>
-            <li><a href="category_manage.php">Manage Category</a></li>
-            <li><a href="book.php">Book</a></li>
-            <li><a href="book_manage.php">Manage Book</a></li>
+            <li><a href="category_manage.php">Category_Manage</a></li>
             <li><a href="role.php">Role</a></li>
-            <li><a href="role_manage.php">Manage Role</a></li>
-            <li><a href="employee.php">Employee</a></li>
-            <li><a href="employee_manage.php" class="active">Manage Employee</a></li>
+            <li><a href="role_manage.php">Role_Manage</a></li>
         </ul>
     </div>
 </body>
